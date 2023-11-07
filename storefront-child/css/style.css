@@ -6639,12 +6639,12 @@ a {
   margin-top: 0.5em !important;
 }
 
-#product-70 {
+.product {
   padding-left: 6.976744186vw;
   padding-right: 6.976744186vw;
 }
 @media screen and (min-width: 769px) {
-  #product-70 {
+  .product {
     max-width: 69.4444444444vw;
     width: 100%;
     margin: 0 auto;
