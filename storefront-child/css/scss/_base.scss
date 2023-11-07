@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+// ==========================================================================
+// Constant
+// ========================================================================== 
+// -----------------------------------------------------------------
+// font
+// -----------------------------------------------------------------
+$jp-font: dnp-shuei-gothic-gin-std, "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$yu-font: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$en-font: 'Yeseva One', cursive;
+
+// -----------------------------------------------------------------
+// color
+// -----------------------------------------------------------------
+$light-line: #DEE4E6;
+$ttl: #000;
+$bg-base: #fff;
+$bg: #F6F0EB;
+$bg_point: #F2E9E8;
+$bg-gray: #fafafa;
+$main-txt: #000;
+$menu-txt: #000;
+$light-txt: #868686;
+$link: #EA5533;
+$white: #fff;
+$point: #CC818A;
+$point_alt: #DC959E;
+$point_light: #E6C0BD;
+$text: #707272;
+$color-gray5: #E0E0E0;
+$color-gray4: #BDBDBD;
+$light-gray: #C1BBB6;
+
+
+// -----------------------------------------------------------------
+// constant
+// -----------------------------------------------------------------
+$side-margin-slim: 20px;
+$side-margin-wide: 30px;
+$side-margin-pc: 56px;
+$header-height: 64px;
+$header-height-pc: 40px;
+$menu-width-pc: 200px;
+$def-link-height: 44px;
+$tb-width: 560px;
+$pc-width: 960px;
+$contents-width: 600px + $side-margin-pc * 2;
+$contents-max-sp: 600px;
+
+
+// -----------------------------------------------------------------
+// breakpoints
+// -----------------------------------------------------------------
+$breakpoints: (
+  'tb': 'screen and (min-width: 560px)',
+  'tb2': 'screen and (min-width: 769px)',
+  'pc': 'screen and (min-width: 960px)',
+  'pc2': 'screen and (min-width: 1100px)',
+  'maxwidth': 'screen and (min-width: 1440px)',
+  'maxwidth2': 'screen and (min-width: 1712px)',
+  'pc3': 'screen and (min-width: 1320px)',
+  'min': 'screen and (max-width: 352px)',
+  ) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// -----------------------------------------------------------------
+// function
+// -----------------------------------------------------------------
+$master-width-pc: 1440px;
+
+@function pxvwPC($target) {
+  @return ($target / $master-width-pc) * 100vw;
+}
+
+$master-width-sp: 430px;
+
+@function pxvwSP($target) {
+  @return ($target / $master-width-sp) * 100vw;
+}
+
+$baseFontSize: 16;
+
+@function rem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}
+
+// ==========================================================================
+// base
+// ========================================================================== 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: pxvwSP(16px
+  );
+
+@include mq(tb2) {
+  font-size: pxvwPC(16px);
+  min-height: 100%;
+  position: relative;
+}
+}
+
+body {
+  background: #f1f1f1;
+  color: #333;
+  font-size: rem(16);
+  font-family: "dnp-shuei-gothic-gin-std", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  height: auto;
+  font-feature-settings: "palt";
+  letter-spacing: .05em;
+  box-sizing: border-box;
+
+  @include mq(tb2) {}
+
+  &.-noscroll {}
+}
+
+
+
+body * {
+  box-sizing: inherit;
+}
+
+a {
+  cursor: pointer;
+}
+
+img,
+svg {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fadebody {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// 文字選択時の色
+::selection {
+  background: $point_light;
+}
+
+//Firefox
+::-moz-selection {
+  background: $point_light;
+}
+
+// 
+input[type="text"]:focus,
+select:focus {
+  outline: solid 2px $point;
+}
