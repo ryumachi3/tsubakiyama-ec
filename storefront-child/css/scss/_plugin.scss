@@ -475,3 +475,94 @@
 .toc_list {
   margin-top: .5em !important;
 }
+
+
+
+
+
+
+
+#product-70 {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {
+    max-width: pxvwPC(1000px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.woocommerce-product-gallery {
+  @include mq(tb2) {
+    max-width: pxvwPC(540px);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.entry-summary {
+  @include mq(tb2) {
+    max-width: pxvwPC(400px);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.entry-title {
+  font-size: rem(36);
+  padding-bottom: pxvwSP(28px);
+
+  @include mq(tb2) {
+    font-size: rem(48);
+    padding-bottom: pxvwPC(28px);
+  }
+}
+
+.summary .price {
+  font-size: rem(24) !important;
+  margin: 0 !important;
+
+  @include mq(tb2) {
+    font-size: rem(30) !important;
+  }
+}
+
+.woocommerce-product-details__short-description p {
+  line-height: 1.8;
+  font-size: rem(13);
+  margin: pxvwSP(28px) 0 pxvwSP(40px);
+
+  @include mq(tb2) {
+    font-size: rem(14);
+    margin: pxvwPC(34px) 0;
+  }
+}
+
+tbody .value select {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  max-width: 100% !important;
+  width: 100%;
+  background-color: #fff;
+  border-radius: pxvwSP(10px) !important;
+  margin-top: pxvwSP(16px) !important;
+  border: none !important;
+
+  @include mq(tb2) {
+    border-radius: pxvwPC(10px) !important;
+    margin-top: pxvwPC(16px) !important;
+  }
+}
+
+.value select:first-child {
+  @include mq(tb2) {
+    padding: pxvwPC(20px) pxvwPC(10px);
+  }
+}
+
+.variations {
+  color: #333;
+}
