@@ -226,6 +226,9 @@ input[type="submit"].c-submit {
   text-align: center;
   font-feature-settings: "palt";
   letter-spacing: 0.05em;
+  background-color: #373737;
+  color: #fff;
+  transition: background-color 0.3s;
 
   @include mq(tb2) {
     display: block;
@@ -236,8 +239,6 @@ input[type="submit"].c-submit {
   &.-product {
     display: flex;
     justify-content: space-between;
-    color: #fff;
-    background-color: #373737;
     width: 50%;
     margin-top: pxvwSP(30px);
 
@@ -250,16 +251,12 @@ input[type="submit"].c-submit {
   &.-set {
     display: flex;
     justify-content: space-between;
-    color: #fff;
-    background-color: #373737;
     width: 50%;
   }
 
   &.-recommend {
     display: flex;
     justify-content: space-between;
-    color: #fff;
-    background-color: #373737;
     width: 59%;
     margin: 0 auto;
 
@@ -272,8 +269,6 @@ input[type="submit"].c-submit {
   &.-gift-set {
     display: flex;
     justify-content: space-between;
-    color: #fff;
-    background-color: #373737;
     max-width: pxvwSP(185px);
     width: 100%;
     margin: 0 auto;
@@ -282,18 +277,11 @@ input[type="submit"].c-submit {
       max-width: pxvwPC(185px);
     }
   }
+}
 
-  &.-insta {
-    color: #fff;
-    background-color: #D10307;
-    min-width: 180px;
-  }
-
-  &.-youtube {
-    color: #fff;
-    background-color: #D10307;
-    min-width: 180px;
-  }
+.c-button:hover {
+  background-color: #FDF1D8;
+  color: #333;
 }
 
 .c-button2 {
@@ -328,6 +316,15 @@ input[type="submit"].c-submit {
 
   @include mq(tb2) {}
 }
+
+.c-button2:hover .c-button__img.open {
+  display: none;
+}
+
+.c-button2:hover .c-button__img.close {
+  display: block;
+}
+
 
 .c-button3 {
   width: 100%;
@@ -394,11 +391,16 @@ input[type="submit"].c-submit {
   width: pxvwSP(36px);
   height: pxvwSP(36px);
   margin-right: pxvwSP(10px);
+  transition: all 0.3s;
 
   @include mq(tb2) {
     width: pxvwPC(36px);
     height: pxvwPC(36px);
     margin-right: pxvwPC(10px);
+  }
+
+  &.close {
+    display: none;
   }
 
   &.-left {

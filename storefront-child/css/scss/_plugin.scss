@@ -566,3 +566,95 @@ tbody .value select {
 .variations {
   color: #333;
 }
+
+
+// 買い物かご-----------------------------------------------------------------
+.woocommerce-cart-form table {
+  width: 100%;
+}
+
+.woocommerce-cart-form thead {
+  display: none;
+}
+
+.woocommerce-cart-form tbody {
+  width: 100%;
+}
+
+.woocommerce-cart-form tr {
+  display: flex;
+  justify-content: center;
+}
+
+.woocommerce-cart-form .product-thumbnail a {
+  display: block;
+
+  @include mq(tb2) {
+    margin-right: pxvwPC(30px);
+  }
+}
+
+.woocommerce-cart-form img {
+  border-radius: pxvwSP(20px);
+
+  @include mq(tb2) {
+    border-radius: pxvwPC(20px);
+  }
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__cart-item a {
+  font-size: rem(20);
+}
+
+.woocommerce-cart-form__cart-item .product-name {
+  width: 30%;
+}
+
+.woocommerce-cart-form__cart-item .product-name .variation dt {
+  float: left;
+  font-size: rem(14);
+
+  @include mq(tb2) {
+    margin-right: pxvwPC(10px);
+  }
+}
+
+.woocommerce-cart-form__cart-item .product-name .variation dd p {
+  font-size: rem(14);
+}
+
+.woocommerce-cart-form__cart-item .product-name .variation dt .variation-kakunin {
+  display: none;
+}
+
+.actions {
+  display: none;
+}
+
+
+.cart_totals table {
+  background-color: #fff;
+  border-radius: pxvwSP(10px);
+
+  @include mq(tb2) {
+    border-radius: pxvwPC(10px);
+  }
+}
+
+.cart-subtotal th {
+  width: 50%;
+}
+
+.cart_totals h2 {
+  display: none;
+}
+
+.cart-collaterals table {
+  width: 100%;
+}
+
+.cart-collaterals tbody {
+  width: 100%;
+}
+
+// 買い物かご-----------------------------------------------------------------

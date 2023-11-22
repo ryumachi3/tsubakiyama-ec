@@ -10,26 +10,35 @@
     </div>
 
     <div class="p-header__list__box">
-      <div class="p-header__list__item__first" @click="isNav = !isNav" :class="[ isNav ? '-isnav' : '' ]">
+      <!-- <div class="p-header__list__item__first" @click="isNav = !isNav" :class="[ isNav ? '-isnav' : '' ]">
         <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="tsubakiyama" class="p-header__list__item__first__img">
         <div href="" class="p-header__list__item__first__link">商品一覧</div>
-      </div>
+      </div> -->
 
       <ul class="p-header__list">
+        
+        <li class="p-header__list__item" @click="isNav = !isNav" :class="[ isNav ? '-isnav' : '' ]">
+          <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="" class="p-header__hanko__icon__img">
+          <div href="" class="p-header__list__item__link">商品一覧<span class="p-header__list__icon__plus">　+</span><span class="p-header__list__icon__plus">　-</span></div>
+        </li>
 
         <li class="p-header__list__item">
+          <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="" class="p-header__hanko__icon__img">
           <a href="<?php echo home_url('/about'); ?>" class="p-header__list__item__link">椿山について</a>
         </li>
 
         <li class="p-header__list__item">
+          <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="" class="p-header__hanko__icon__img">
           <a href="<?php echo home_url('/about'); ?>" class="p-header__list__item__link">はんこの選び方</a>
         </li>
 
         <li class="p-header__list__item">
+          <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="" class="p-header__hanko__icon__img">
           <a href="<?php echo home_url('/news'); ?>" class="p-header__list__item__link">お知らせ</a>
         </li>
 
         <li class="p-header__list__item">
+          <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="" class="p-header__hanko__icon__img">
           <a href="<?php echo home_url('/inquiry'); ?>" class="p-header__list__item__link">お問い合わせ</a>
         </li>
       </ul>
@@ -48,8 +57,10 @@
           </a>
         </li>
         <li class="p-header__icon__list__item menu">
-          <div class="p-header__icon__list__link" @click="isMenu = !isMenu">
-            <img src="<?php echo get_theme_file_uri() ?>/img/head-icon03.svg" alt="" class="p-header__icon__list__link__img">
+          <div class="p-header__icon__list__link" @click="isMenu = !isMenu" :class="[ isMenu ? '-ismenu' : '' ]">
+            <img src="<?php echo get_theme_file_uri() ?>/img/head-icon03-open.svg" alt="" class="p-header__icon__list__link__img open">
+            <img src="<?php echo get_theme_file_uri() ?>/img/head-icon03-close.svg" alt="" class="p-header__icon__list__link__img close">
+
           </div>
         </li>
       </ul>
@@ -64,7 +75,8 @@
         <p class="p-header-product__sub__ttl__box c-red c-f14">預金口座を開設窓口で預金などに。</p>
         <h2 class="p-header-product__ttl__box c-font-fm">個人印</h2>
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 pro-nav ">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img pro-nav close">
           <p>サイズ選択へ</p>
         </a>
       </div>
@@ -78,7 +90,8 @@
         <p class="p-header-product__sub__ttl__box c-red c-f14">預金口座を開設窓口で預金などに。</p>
         <h2 class="p-header-product__ttl__box c-font-fm">個人印</h2>
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 pro-nav ">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img pro-nav close">
           <p>サイズ選択へ</p>
         </a>
       </div>
@@ -92,7 +105,8 @@
         <p class="p-header-product__sub__ttl__box c-red c-f14">預金口座を開設窓口で預金などに。</p>
         <h2 class="p-header-product__ttl__box c-font-fm">個人印</h2>
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 pro-nav ">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img pro-nav close">
           <p>サイズ選択へ</p>
         </a>
       </div>
@@ -106,7 +120,8 @@
         <p class="p-header-product__sub__ttl__box c-red c-f14">預金口座を開設窓口で預金などに。</p>
         <h2 class="p-header-product__ttl__box c-font-fm">個人印</h2>
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 pro-nav ">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img pro-nav close">
           <p>サイズ選択へ</p>
         </a>
       </div>
@@ -125,7 +140,8 @@
           <p class="p-header-product__dec__box">個人印とは、その名のとおり銀行や信用金庫といった金融機関に対して届出を行ないます。 </p>
       </div>
       <a href="<?php echo home_url('/about'); ?>" class="c-button2 pro-nav last">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img pro-nav open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img pro-nav close">
           <p>サイズ選択へ</p>
         </a>
     </div>
@@ -162,7 +178,8 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min ">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -178,7 +195,8 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -194,7 +212,8 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -210,7 +229,8 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -227,7 +247,8 @@
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <p class="p-nav__list__dec__min__box2">個人印とは、その名のとおり銀行や信用金庫といった金融機関に対して届出を行ないます。 </p>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
+                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -236,53 +257,57 @@
       </li>
 
       <li class="p-nav__list__item">
-        <a class="p-nav__list__dec__box1">
+        <a href="<?php echo home_url('/about'); ?>" class="p-nav__list__dec__box1">
           <div class="p-nav__list__left">
             <img class="p-nav__list__img" src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="">
             <p class="p-nav__list__ttl">椿山について</p>
           </div>
 
           <div class="p-nav__list__right">
-            <img class="p-nav__list__btn__img" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img open" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img close" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="">
           </div>
         </a>
       </li>
 
       <li class="p-nav__list__item">
-        <a class="p-nav__list__dec__box1">
+        <a href="<?php echo home_url('#'); ?>" class="p-nav__list__dec__box1">
           <div class="p-nav__list__left">
             <img class="p-nav__list__img" src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="">
             <p class="p-nav__list__ttl">はんこの選び方</p>
           </div>
 
           <div class="p-nav__list__right">
-            <img class="p-nav__list__btn__img" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img open" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img close" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="">
           </div>
         </a>
       </li>
 
       <li class="p-nav__list__item">
-        <a class="p-nav__list__dec__box1">
+        <a href="<?php echo home_url('/news'); ?>" class="p-nav__list__dec__box1">
           <div class="p-nav__list__left">
             <img class="p-nav__list__img" src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="">
             <p class="p-nav__list__ttl">お知らせ</p>
           </div>
 
           <div class="p-nav__list__right">
-            <img class="p-nav__list__btn__img" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img open" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img close" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="">
           </div>
         </a>
       </li>
 
       <li class="p-nav__list__item">
-        <a  href="<?php echo home_url('/inquiry'); ?>" class="p-nav__list__dec__box1">
+        <a href="<?php echo home_url('/inquiry'); ?>" href="<?php echo home_url('/inquiry'); ?>" class="p-nav__list__dec__box1">
           <div class="p-nav__list__left">
             <img class="p-nav__list__img" src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="">
             <p class="p-nav__list__ttl">お問い合わせ</p>
           </div>
 
           <div class="p-nav__list__right">
-            <img class="p-nav__list__btn__img" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img open" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_grey.png" alt="">
+            <img class="p-nav__list__btn__img close" src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="">
           </div>
         </a>
       </li>
@@ -295,7 +320,7 @@
       </a>
       <div class="p-nav-info__txt__box">
         <p class="p-nav__info01 c-f14">ご注文は店舗・お電話からでも可能です。</p>
-        <a href="" class="p-nav__tel__link">
+        <a href="tel:086-525-5667" alt="TEL:086-525-5667" class="p-nav__tel__link">
           <img class="p-nav__info__img"src="<?php echo get_theme_file_uri() ?>/img/info_tel.png" alt="">
         </a>
         <p class="p-nav__info__dec">〒713-8102 岡山県倉敷市玉島1373-12（駐車場 4台）</p>

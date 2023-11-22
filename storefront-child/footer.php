@@ -52,7 +52,7 @@
 
 				<div class="p-footer__info__box">
 					<p class="p-footer__info01 c-f14">ご注文は店舗・お電話からでも可能です。</p>
-					<a href="" class="p-footer__tel__link">
+					<a href="tel:086-525-5667" alt="TEL:086-525-5667" class="p-footer__tel__link">
 						<img class="p-footer__info__img"src="<?php echo get_theme_file_uri() ?>/img/info_tel.png" alt="">
 					</a>
 					<p class="p-footer__info__dec">〒713-8102 岡山県倉敷市玉島1373-12（駐車場 4台）</p>

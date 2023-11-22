@@ -139,7 +139,9 @@
 
         <div class="p-intro__btn__box">
           <a href="<?php echo home_url('/about'); ?>" class="c-button2 c-f14">
-            <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+            <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
+            <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
+
             <p>椿山について</p>
           </a>
       </div>
@@ -291,7 +293,8 @@
           </div>
           <div class="p-set__btn__box">
             <a href="<?php echo home_url('/about'); ?>" class="c-button2 -set c-f14">
-              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
+              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
               <p>サイズ選択へ</p>
             </a>
           </div>
@@ -305,7 +308,8 @@
           </div>
           <div class="p-set__btn__box">
             <a href="<?php echo home_url('/about'); ?>" class="c-button2 -set c-f14">
-              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
+              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
               <p>サイズ選択へ</p>
             </a>
           </div>
@@ -455,7 +459,7 @@
               <span class="p-gift-set__inner__sub__ttl__char -first">な</span>
               <span class="p-gift-set__inner__sub__ttl__char -first">日</span>
               <span class="p-gift-set__inner__sub__ttl__char -first">に</span>
-              <span class="p-gift-set__inner__sub__ttl__char -first">、</span>
+              <span class="p-gift-set__inner__sub__ttl__char -first symbol min">、</span>
             </div>
 
             <div class="p-gift-set__inner__sub__ttl__line2">
@@ -464,7 +468,7 @@
               <span class="p-gift-set__inner__sub__ttl__char -second">な</span>
               <span class="p-gift-set__inner__sub__ttl__char -second">方</span>
               <span class="p-gift-set__inner__sub__ttl__char -second">へ</span>
-              <span class="p-gift-set__inner__sub__ttl__char -second">、</span>
+              <span class="p-gift-set__inner__sub__ttl__char -second symbol min">、</span>
             </div>
 
             <div class="p-gift-set__inner__sub__ttl__line3">
@@ -476,7 +480,7 @@
               <span class="p-gift-set__inner__sub__ttl__char -third">り</span>
               <span class="p-gift-set__inner__sub__ttl__char -third">物</span>
               <span class="p-gift-set__inner__sub__ttl__char -third">を</span>
-              <span class="p-gift-set__inner__sub__ttl__char -third">。</span>
+              <span class="p-gift-set__inner__sub__ttl__char -third symbol min">。</span>
             </div>
           </div>
         </div>
@@ -554,7 +558,8 @@
 
       <div class="p-news__btn__box">
       <a href="<?php echo home_url('/news'); ?>" class="c-button2 -news c-f14">
-      <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
+        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
         <p>もっと見る</p>
       </a>
       </div>
@@ -601,7 +606,8 @@
 
         <div class="p-insta__btn__box">
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 c-f14">
-        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
           <p>もっと見る</p>
         </a>
         </div>
@@ -634,7 +640,8 @@
         </a>
         <div class="p-youtube__btn__box">
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 c-f14">
-        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
+          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
           <p>もっと見る</p>
         </a>
         </div>
@@ -765,7 +772,8 @@
 
       <div class="p-faq__btn__box">
       <a href="<?php echo home_url('/faq'); ?>" class="c-button2 c-f14">
-      <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img">
+        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
+        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
         <p>もっと見る</p>
       </a>
       </div>

@@ -146,21 +146,51 @@ a {
     font-size: rem(15);
     padding-top: pxvwPC(10px);
     padding-bottom: pxvwPC(6px);
-    border-bottom: 1px solid rgba(209, 3, 7, 0.1);
-    color: #D10307;
+    border-bottom: pxvwPC(1px) solid rgba(0, 0, 0, 0.1);
   }
 }
 
 .p-header__list {
   @include mq(tb2) {
     display: flex;
+    align-items: center;
   }
 }
 
 .p-header__list__item {
   @include mq(tb2) {
-    display: inline-flex;
     margin-left: pxvwPC(50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.p-header__list__item:hover .p-header__hanko__icon__img {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.p-header__list__item:hover .p-header__list__item__link {
+  transform: translateY(10px);
+  color: #d10307;
+  border-bottom: pxvwPC(1px) solid rgba(209, 3, 7, 0.1);
+}
+
+.p-header__hanko__icon__img {
+  @include mq(tb2) {
+    width: pxvwPC(20px);
+    height: pxvwPC(20px);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+.p-header__list__item:first-child {
+  @include mq(tb2) {
+    margin-left: 0;
   }
 }
 
@@ -169,7 +199,9 @@ a {
     font-size: rem(15);
     color: #333;
     padding-bottom: pxvwPC(6px);
+    padding-top: pxvwPC(10px);
     border-bottom: pxvwPC(1px) solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
   }
 }
 
@@ -297,6 +329,18 @@ a {
   height: 100%;
 
   @include mq(tb2) {}
+}
+
+.p-header__icon__list__link .p-header__icon__list__link__img.close {
+  display: none;
+}
+
+.p-header__icon__list__link.-ismenu .p-header__icon__list__link__img.close {
+  display: block;
+}
+
+.p-header__icon__list__link.-ismenu .p-header__icon__list__link__img.open {
+  display: none;
 }
 
 
@@ -543,6 +587,18 @@ a {
   border-bottom: 1px solid #DFDFDF;
 
   @include mq(tb2) {}
+}
+
+.p-nav__list__item:hover .p-nav__list__btn__img.open {
+  display: none;
+}
+
+.p-nav__list__item:hover .p-nav__list__btn__img.close {
+  display: block;
+}
+
+.p-nav__list__btn__img.close {
+  display: none;
 }
 
 .p-nav__list__item:last-child {
@@ -860,14 +916,28 @@ a {
 // Project
 // -----------------------------------------------------------------
 .symbol {
-  padding-left: pxvwSP(20px);
+  padding-left: pxvwSP(30px);
   width: pxvwSP(8px) !important;
   height: pxvwSP(8px) !important;
 
   @include mq(tb2) {
-    padding-left: 40px;
+    padding-left: pxvwPC(40px);
     width: 8px !important;
     height: 8px !important;
+  }
+}
+
+.symbol.min {
+  padding-left: pxvwSP(8px);
+  width: pxvwSP(8px) !important;
+  height: pxvwSP(8px) !important;
+  line-height: 0.4;
+
+  @include mq(tb2) {
+    padding-left: pxvwPC(8px);
+    width: 8px !important;
+    height: 8px !important;
+    line-height: 0.4;
   }
 }
 
@@ -1724,6 +1794,7 @@ a {
 }
 
 .p-set__btn__box {
+  display: flex;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -2169,17 +2240,31 @@ a {
   border: none;
 }
 
+.p-news__list__item:hover.p-news__list__item::before {
+  background-image: url(../img/btn-arrow.png);
+}
+
+.p-news__list__item:hover .p-news__link {
+  color: #D10307;
+}
+
+.p-news__list__item:hover .p-news__list__tag {
+  background-color: #D10307;
+}
+
 .p-news__list__item::before {
   @include mq (tb2) {
     content: "";
     background-image: url(../img/btn-arrow_grey.png);
     background-size: cover;
-    width: pxvwPC(36px);
-    height: pxvwPC(36px);
+    background-position: center;
+    width: pxvwPC(38px);
+    height: pxvwPC(38px);
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
+    transition: background-image 0.3s;
   }
 }
 
@@ -2189,6 +2274,7 @@ a {
   align-items: center;
   color: #333;
   padding: pxvwSP(20px) 0;
+  transition: color 0.3s;
 
   @include mq (tb2) {
     padding: pxvwPC(20px) 0;
@@ -2229,6 +2315,7 @@ a {
   background-color: #333;
   color: #fff;
   border-radius: 5px;
+  transition: background-color 0.3s;
 
   @include mq (tb2) {
     margin-left: pxvwPC(16px);
@@ -3914,10 +4001,14 @@ a {
 }
 
 .p-news-dt__thumb__box {
+  max-width: pxvwSP(1000px);
+  width: 100%;
+  margin: 0 auto;
   position: relative;
   padding: pxvwSP(30px) pxvwSP(30px) pxvwSP(60px);
 
   @include mq(tb2) {
+    max-width: pxvwPC(1000px);
     padding: pxvwPC(30px) pxvwPC(30px) pxvwPC(60px);
   }
 }
@@ -3935,8 +4026,7 @@ a {
 .p-news-dt__thumb__dec {
   line-height: 2;
 
-  p+p,
-  div {
+  p+p {
     margin-top: 1.5em;
   }
 }

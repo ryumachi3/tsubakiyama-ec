@@ -635,6 +635,9 @@ input[type=submit].c-submit {
   text-align: center;
   font-feature-settings: "palt";
   letter-spacing: 0.05em;
+  background-color: #373737;
+  color: #fff;
+  transition: background-color 0.3s;
 }
 @media screen and (min-width: 769px) {
   .c-button {
@@ -646,8 +649,6 @@ input[type=submit].c-submit {
 .c-button.-product {
   display: flex;
   justify-content: space-between;
-  color: #fff;
-  background-color: #373737;
   width: 50%;
   margin-top: 6.976744186vw;
 }
@@ -660,15 +661,11 @@ input[type=submit].c-submit {
 .c-button.-set {
   display: flex;
   justify-content: space-between;
-  color: #fff;
-  background-color: #373737;
   width: 50%;
 }
 .c-button.-recommend {
   display: flex;
   justify-content: space-between;
-  color: #fff;
-  background-color: #373737;
   width: 59%;
   margin: 0 auto;
 }
@@ -681,8 +678,6 @@ input[type=submit].c-submit {
 .c-button.-gift-set {
   display: flex;
   justify-content: space-between;
-  color: #fff;
-  background-color: #373737;
   max-width: 43.023255814vw;
   width: 100%;
   margin: 0 auto;
@@ -692,15 +687,10 @@ input[type=submit].c-submit {
     max-width: 12.8472222222vw;
   }
 }
-.c-button.-insta {
-  color: #fff;
-  background-color: #D10307;
-  min-width: 180px;
-}
-.c-button.-youtube {
-  color: #fff;
-  background-color: #D10307;
-  min-width: 180px;
+
+.c-button:hover {
+  background-color: #FDF1D8;
+  color: #333;
 }
 
 .c-button2 {
@@ -731,6 +721,14 @@ input[type=submit].c-submit {
     border-bottom: 1px solid #D7D7D7;
   }
 }
+.c-button2:hover .c-button__img.open {
+  display: none;
+}
+
+.c-button2:hover .c-button__img.close {
+  display: block;
+}
+
 .c-button3 {
   width: 100%;
   height: 100%;
@@ -797,6 +795,7 @@ input[type=submit].c-submit {
   width: 8.3720930233vw;
   height: 8.3720930233vw;
   margin-right: 2.3255813953vw;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 769px) {
   .c-button__img {
@@ -804,6 +803,9 @@ input[type=submit].c-submit {
     height: 2.5vw;
     margin-right: 0.6944444444vw;
   }
+}
+.c-button__img.close {
+  display: none;
 }
 .c-button__img.-left {
   width: 2.3255813953vw;
@@ -1114,21 +1116,51 @@ a {
     font-size: 0.9375rem;
     padding-top: 0.6944444444vw;
     padding-bottom: 0.4166666667vw;
-    border-bottom: 1px solid rgba(209, 3, 7, 0.1);
-    color: #D10307;
+    border-bottom: 0.0694444444vw solid rgba(0, 0, 0, 0.1);
   }
 }
 
 @media screen and (min-width: 769px) {
   .p-header__list {
     display: flex;
+    align-items: center;
   }
 }
 
 @media screen and (min-width: 769px) {
   .p-header__list__item {
-    display: inline-flex;
     margin-left: 3.4722222222vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.p-header__list__item:hover .p-header__hanko__icon__img {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.p-header__list__item:hover .p-header__list__item__link {
+  transform: translateY(10px);
+  color: #d10307;
+  border-bottom: 0.0694444444vw solid rgba(209, 3, 7, 0.1);
+}
+
+@media screen and (min-width: 769px) {
+  .p-header__hanko__icon__img {
+    width: 1.3888888889vw;
+    height: 1.3888888889vw;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .p-header__list__item:first-child {
+    margin-left: 0;
   }
 }
 
@@ -1137,7 +1169,9 @@ a {
     font-size: 0.9375rem;
     color: #333;
     padding-bottom: 0.4166666667vw;
+    padding-top: 0.6944444444vw;
     border-bottom: 0.0694444444vw solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
   }
 }
 
@@ -1265,6 +1299,18 @@ a {
   display: block;
   height: 100%;
 }
+.p-header__icon__list__link .p-header__icon__list__link__img.close {
+  display: none;
+}
+
+.p-header__icon__list__link.-ismenu .p-header__icon__list__link__img.close {
+  display: block;
+}
+
+.p-header__icon__list__link.-ismenu .p-header__icon__list__link__img.open {
+  display: none;
+}
+
 .p-header-product__nav__box {
   display: none;
 }
@@ -1502,6 +1548,18 @@ a {
   width: 100%;
   border-bottom: 1px solid #DFDFDF;
 }
+.p-nav__list__item:hover .p-nav__list__btn__img.open {
+  display: none;
+}
+
+.p-nav__list__item:hover .p-nav__list__btn__img.close {
+  display: block;
+}
+
+.p-nav__list__btn__img.close {
+  display: none;
+}
+
 .p-nav__list__item:last-child {
   padding-bottom: 0;
   border: none;
@@ -1816,15 +1874,30 @@ a {
 }
 
 .symbol {
-  padding-left: 4.6511627907vw;
+  padding-left: 6.976744186vw;
   width: 1.8604651163vw !important;
   height: 1.8604651163vw !important;
 }
 @media screen and (min-width: 769px) {
   .symbol {
-    padding-left: 40px;
+    padding-left: 2.7777777778vw;
     width: 8px !important;
     height: 8px !important;
+  }
+}
+
+.symbol.min {
+  padding-left: 1.8604651163vw;
+  width: 1.8604651163vw !important;
+  height: 1.8604651163vw !important;
+  line-height: 0.4;
+}
+@media screen and (min-width: 769px) {
+  .symbol.min {
+    padding-left: 0.5555555556vw;
+    width: 8px !important;
+    height: 8px !important;
+    line-height: 0.4;
   }
 }
 
@@ -2698,6 +2771,7 @@ a {
 }
 
 .p-set__btn__box {
+  display: flex;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -3154,17 +3228,31 @@ a {
   border: none;
 }
 
+.p-news__list__item:hover.p-news__list__item::before {
+  background-image: url(../img/btn-arrow.png);
+}
+
+.p-news__list__item:hover .p-news__link {
+  color: #D10307;
+}
+
+.p-news__list__item:hover .p-news__list__tag {
+  background-color: #D10307;
+}
+
 @media screen and (min-width: 769px) {
   .p-news__list__item::before {
     content: "";
     background-image: url(../img/btn-arrow_grey.png);
     background-size: cover;
-    width: 2.5vw;
-    height: 2.5vw;
+    background-position: center;
+    width: 2.6388888889vw;
+    height: 2.6388888889vw;
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
+    transition: background-image 0.3s;
   }
 }
 
@@ -3174,6 +3262,7 @@ a {
   align-items: center;
   color: #333;
   padding: 4.6511627907vw 0;
+  transition: color 0.3s;
 }
 @media screen and (min-width: 769px) {
   .p-news__link {
@@ -3216,6 +3305,7 @@ a {
   background-color: #333;
   color: #fff;
   border-radius: 5px;
+  transition: background-color 0.3s;
 }
 @media screen and (min-width: 769px) {
   .p-news__list__tag {
@@ -4887,11 +4977,15 @@ a {
 }
 
 .p-news-dt__thumb__box {
+  max-width: 232.5581395349vw;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
   padding: 6.976744186vw 6.976744186vw 13.9534883721vw;
 }
 @media screen and (min-width: 769px) {
   .p-news-dt__thumb__box {
+    max-width: 69.4444444444vw;
     padding: 2.0833333333vw 2.0833333333vw 4.1666666667vw;
   }
 }
@@ -4910,8 +5004,7 @@ a {
 .p-news-dt__thumb__dec {
   line-height: 2;
 }
-.p-news-dt__thumb__dec p + p,
-.p-news-dt__thumb__dec div {
+.p-news-dt__thumb__dec p + p {
   margin-top: 1.5em;
 }
 
@@ -6724,6 +6817,97 @@ tbody .value select {
 
 .variations {
   color: #333;
+}
+
+.woocommerce-cart-form table {
+  width: 100%;
+}
+
+.woocommerce-cart-form thead {
+  display: none;
+}
+
+.woocommerce-cart-form tbody {
+  width: 100%;
+}
+
+.woocommerce-cart-form tr {
+  display: flex;
+  justify-content: center;
+}
+
+.woocommerce-cart-form .product-thumbnail a {
+  display: block;
+}
+@media screen and (min-width: 769px) {
+  .woocommerce-cart-form .product-thumbnail a {
+    margin-right: 2.0833333333vw;
+  }
+}
+
+.woocommerce-cart-form img {
+  border-radius: 4.6511627907vw;
+}
+@media screen and (min-width: 769px) {
+  .woocommerce-cart-form img {
+    border-radius: 1.3888888889vw;
+  }
+}
+
+.woocommerce-cart-form .woocommerce-cart-form__cart-item a {
+  font-size: 1.25rem;
+}
+
+.woocommerce-cart-form__cart-item .product-name {
+  width: 30%;
+}
+
+.woocommerce-cart-form__cart-item .product-name .variation dt {
+  float: left;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 769px) {
+  .woocommerce-cart-form__cart-item .product-name .variation dt {
+    margin-right: 0.6944444444vw;
+  }
+}
+
+.woocommerce-cart-form__cart-item .product-name .variation dd p {
+  font-size: 0.875rem;
+}
+
+.woocommerce-cart-form__cart-item .product-name .variation dt .variation-kakunin {
+  display: none;
+}
+
+.actions {
+  display: none;
+}
+
+.cart_totals table {
+  background-color: #fff;
+  border-radius: 2.3255813953vw;
+}
+@media screen and (min-width: 769px) {
+  .cart_totals table {
+    border-radius: 0.6944444444vw;
+  }
+}
+
+.cart-subtotal th {
+  width: 50%;
+}
+
+.cart_totals h2 {
+  display: none;
+}
+
+.cart-collaterals table {
+  width: 100%;
+}
+
+.cart-collaterals tbody {
+  width: 100%;
 }
 
 .mt8 {
