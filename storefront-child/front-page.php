@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <?php get_template_part('nav'); ?>
 
-<div class="p-subnav__line-btn">
+<!-- <div class="p-subnav__line-btn">
   <a href="https://lin.ee/NIHpv5g" class="p-subnav__line-btn__link">
     <img src="<?php echo get_theme_file_uri() ?>/img/line-btn-sp.png" alt="" class="p-subnav__line-btn__img">
   </a>
-</div>
+</div> -->
 
 <!-- main-visual-->
 
@@ -39,9 +39,9 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
               <!-- Slides -->
-            <div class="swiper-slide"><img src="<?php echo get_theme_file_uri() ?>/img/mv_01.jpg" alt="" class="p-kv__img"></div>
-            <div class="swiper-slide"><img src="<?php echo get_theme_file_uri() ?>/img/mv_02.jpg" alt="" class="p-kv__img"></div>
-            <div class="swiper-slide"><img src="<?php echo get_theme_file_uri() ?>/img/mv_03.jpg" alt="" class="p-kv__img"></div>
+            <div class="swiper-slide -top"><img src="<?php echo get_theme_file_uri() ?>/img/mv_01.jpg" alt="" class="p-kv__img"></div>
+            <div class="swiper-slide -middle"><img src="<?php echo get_theme_file_uri() ?>/img/mv_02.jpg" alt="" class="p-kv__img"></div>
+            <div class="swiper-slide -last"><img src="<?php echo get_theme_file_uri() ?>/img/mv_03.jpg" alt="" class="p-kv__img"></div>
           </div>
         </div>
       </div>
@@ -139,8 +139,6 @@
 
         <div class="p-intro__btn__box">
           <a href="<?php echo home_url('/about'); ?>" class="c-button2 c-f14">
-            <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
-            <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
 
             <p>椿山について</p>
           </a>
@@ -293,8 +291,6 @@
           </div>
           <div class="p-set__btn__box">
             <a href="<?php echo home_url('/about'); ?>" class="c-button2 -set c-f14">
-              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
-              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
               <p>サイズ選択へ</p>
             </a>
           </div>
@@ -308,8 +304,6 @@
           </div>
           <div class="p-set__btn__box">
             <a href="<?php echo home_url('/about'); ?>" class="c-button2 -set c-f14">
-              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
-              <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
               <p>サイズ選択へ</p>
             </a>
           </div>
@@ -558,8 +552,6 @@
 
       <div class="p-news__btn__box">
       <a href="<?php echo home_url('/news'); ?>" class="c-button2 -news c-f14">
-        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
-        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
         <p>もっと見る</p>
       </a>
       </div>
@@ -606,8 +598,6 @@
 
         <div class="p-insta__btn__box">
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 c-f14">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
           <p>もっと見る</p>
         </a>
         </div>
@@ -640,8 +630,6 @@
         </a>
         <div class="p-youtube__btn__box">
         <a href="<?php echo home_url('/about'); ?>" class="c-button2 c-f14">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
-          <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
           <p>もっと見る</p>
         </a>
         </div>
@@ -772,8 +760,6 @@
 
       <div class="p-faq__btn__box">
       <a href="<?php echo home_url('/faq'); ?>" class="c-button2 c-f14">
-        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img open">
-        <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img close">
         <p>もっと見る</p>
       </a>
       </div>

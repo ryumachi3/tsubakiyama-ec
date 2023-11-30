@@ -41,6 +41,19 @@ $(function () {
   });
 });
 
+function scrollAddClass() {
+  const scrollEffect = document.querySelectorAll('.p-subnav__line-btn');
+  let windowHeight = window.innerHeight;
+  for (let i = 0; i < scrollEffect.length; i++) {
+    target = scrollEffect[i].getBoundingClientRect().top;
+    if (target < windowHeight) {
+      scrollEffect[i].classList.add('is-active');
+    }
+  }
+}
+document.addEventListener('DOMContentLoaded', scrollAddClass);
+document.addEventListener('scroll', scrollAddClass);
+
 
 
 Vue.component('fade-in', {
@@ -131,7 +144,7 @@ new Vue({
         768: {
           speed: 600, // スライドの切り替えスピード
           loop: true, // ループさせる
-          slidesPerView: 1, // スライドを複数枚表示する
+          slidesPerView: 3, // スライドを複数枚表示する
           centeredSlides: true,  // スライドを中央寄せにする
           spaceBetween: 0, // スライド間の余白
         }

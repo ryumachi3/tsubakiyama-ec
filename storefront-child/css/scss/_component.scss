@@ -285,6 +285,7 @@ input[type="submit"].c-submit {
 }
 
 .c-button2 {
+  position: relative;
   color: #333;
   display: flex;
   align-items: center;
@@ -292,10 +293,15 @@ input[type="submit"].c-submit {
   &.min {
     font-size: rem(12);
     margin-top: pxvwSP(16px);
+    width: pxvwSP(100px);
+    padding: pxvwSP(4px) 0 0 pxvwSP(28px);
 
     @include mq(tb2) {
       margin-top: pxvwPC(16px);
+      width: pxvwPC(100px);
+      padding: pxvwPC(4px) 0 0 pxvwPC(28px);
     }
+
   }
 
   &.pro-nav.last {
@@ -317,12 +323,46 @@ input[type="submit"].c-submit {
   @include mq(tb2) {}
 }
 
-.c-button2:hover .c-button__img.open {
-  display: none;
+.c-button2.min p {
+  padding-bottom: pxvwSP(4px);
+  border-bottom: pxvwPC(1px) solid rgba(0, 0, 0, 0.1);
+
+  @include mq(tb2) {
+    padding-bottom: pxvwPC(4px);
+  }
 }
 
-.c-button2:hover .c-button__img.close {
+.c-button2::before {
+  content: "";
   display: block;
+  width: pxvwSP(36.5px);
+  height: pxvwSP(36.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/btn-arrow_white.svg);
+  background-size: cover;
+  transition: background-image 0.3s;
+
+  @include mq(tb2) {
+    width: pxvwPC(36px);
+    height: pxvwPC(36px);
+  }
+
+}
+
+.c-button2.min::before {
+  width: pxvwSP(22px);
+  height: pxvwSP(22px);
+
+  @include mq(tb2) {
+    width: pxvwPC(22px);
+    height: pxvwPC(22px);
+  }
+}
+
+.c-button2:hover.c-button2::before {
+  background-image: url(../img/btn-arrow.svg);
 }
 
 

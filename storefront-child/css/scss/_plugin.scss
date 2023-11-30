@@ -86,6 +86,24 @@
   }
 }
 
+.kv .swiper-slide.-top {
+  @include mq (tb2) {
+    width: pxvwPC(600px) !important;
+  }
+}
+
+.kv .swiper-slide.-middle {
+  @include mq (tb2) {
+    width: pxvwPC(200px) !important;
+  }
+}
+
+.kv .swiper-slide.-last {
+  @include mq (tb2) {
+    width: pxvwPC(200px) !important;
+  }
+}
+
 // kv swiper-----------------------------------------------------------------
 
 
@@ -184,7 +202,7 @@
 }
 
 .swiper-button-prev.-recommend {
-  top: 12% !important;
+  top: 5% !important;
   right: 19% !important;
   left: auto !important;
   transform: rotate(180deg);
@@ -196,7 +214,7 @@
 }
 
 .swiper-button-next.-recommend {
-  top: 12% !important;
+  top: 5% !important;
   right: 6% !important;
 
   @include mq (tb2) {
@@ -217,11 +235,11 @@
 }
 
 .swiper-button-next:after {
-  background-image: url(../img/btn-arrow_white.png) !important;
+  background-image: url(../img/btn-arrow_white.svg) !important;
 }
 
 .swiper-button-prev:after {
-  background-image: url(../img/btn-arrow_white.png) !important;
+  background-image: url(../img/btn-arrow_white.svg) !important;
 }
 
 
@@ -328,11 +346,11 @@
 }
 
 .swiper-button-next:after {
-  background-image: url(../img/btn-arrow_white.png) !important;
+  background-image: url(../img/btn-arrow_white.svg) !important;
 }
 
 .swiper-button-prev:after {
-  background-image: url(../img/btn-arrow_white.png) !important;
+  background-image: url(../img/btn-arrow_white.svg) !important;
 }
 
 

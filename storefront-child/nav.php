@@ -19,7 +19,7 @@
         
         <li class="p-header__list__item" @click="isNav = !isNav" :class="[ isNav ? '-isnav' : '' ]">
           <img src="<?php echo get_theme_file_uri() ?>/img/hanko-icon.svg" alt="" class="p-header__hanko__icon__img">
-          <div href="" class="p-header__list__item__link">商品一覧<span class="p-header__list__icon__plus">　+</span><span class="p-header__list__icon__plus">　-</span></div>
+          <div href="" class="p-header__list__item__link">商品一覧<span class="p-header__list__icon__plus">＋</span><span class="p-header__list__icon__minus">ー</span></div>
         </li>
 
         <li class="p-header__list__item">
@@ -178,8 +178,6 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min ">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -195,8 +193,6 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -212,8 +208,6 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -229,8 +223,6 @@
               <p class="p-nav__list__dec__sub__ttl__box2">預金口座を開設窓口で預金などに。</p>
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
@@ -247,8 +239,6 @@
               <h2 class="p-nav__list__dec__ttl__box2 c-font-fm">個人印</h2>
               <p class="p-nav__list__dec__min__box2">個人印とは、その名のとおり銀行や信用金庫といった金融機関に対して届出を行ないます。 </p>
               <a href="<?php echo home_url('/about'); ?>" class="c-button2 min">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow_white.png" alt="" class="c-button__img min open">
-                <img src="<?php echo get_theme_file_uri() ?>/img/btn-arrow.png" alt="" class="c-button__img min close">
                 <p>サイズ選択へ</p>
               </a>
             </div>
