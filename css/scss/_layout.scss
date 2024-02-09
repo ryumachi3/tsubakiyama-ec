@@ -1,0 +1,224 @@
+// ======================================================================
+// Layout
+// ======================================================================
+.v-home {
+  position: relative;
+}
+
+#page {
+  position: relative;
+}
+
+#app {
+  font-feature-settings: "palt";
+  letter-spacing: .02em;
+  background-color: #FBF9F4;
+  position: relative;
+
+  @include mq (tb2) {}
+}
+
+.bg-gray {
+  transition: all 0.3s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.bg-gray.-ismenu {
+  visibility: visible;
+  opacity: 0.6;
+}
+
+#l-main {
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: pxvwSP(60px);
+
+  @include mq(tb2) {
+    max-width: pxvwPC(1440px);
+    padding-top: pxvwPC(200px);
+  }
+}
+
+#l-news {
+  overflow: hidden;
+  position: relative;
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {}
+}
+
+#l-single-news {
+  overflow: hidden;
+  position: relative;
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {}
+}
+
+#l-single-product {
+  overflow: hidden;
+  position: relative;
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {}
+}
+
+.l-news-pagination {
+  // opacity: 0; // ★★★一時的に非表示
+
+  margin: pxvwSP(60px) 0 pxvwSP(70px);
+
+  @include mq(tb2) {
+    margin: pxvwPC(60px) 0 pxvwPC(70px);
+  }
+}
+
+#l-intro {
+  padding: pxvwSP(68px) 0 pxvwSP(80px);
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+  position: relative;
+  z-index: 11;
+
+  @include mq(tb2) {
+    max-width: pxvwPC(800px);
+    width: 100%;
+    margin: 0 auto;
+    padding: pxvwPC(68px) 0 pxvwPC(130px);
+  }
+}
+
+#l-product {
+  position: relative;
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: pxvwPC(180px);
+    padding-left: 0;
+    padding-right: 0;
+    max-width: pxvwPC(1200px);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+#l-set {
+  position: relative;
+  padding-left: pxvwSP($side-margin-slim);
+  padding-right: pxvwSP($side-margin-slim);
+
+  @include mq(tb2) {
+    padding-left: 0;
+    padding-right: 0;
+    width: pxvwPC(1062px);
+    margin: 0 auto;
+  }
+}
+
+#l-recommend {
+  margin: pxvwSP(100px) 0 pxvwSP(120px);
+  position: relative;
+
+  @include mq(tb2) {
+    margin: pxvwPC(160px) 0 pxvwPC(240px);
+  }
+}
+
+.l-gift-set {
+  position: relative;
+  padding-left: pxvwSP($side-margin-slim);
+  padding-right: pxvwSP($side-margin-slim);
+  margin-top: pxvwSP(580px);
+
+  @include mq(tb2) {
+    padding-right: 0;
+    padding-left: pxvwPC(113px);
+    margin-top: pxvwPC(320px);
+  }
+}
+
+.l-news {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+}
+
+.l-sns {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {}
+}
+
+.l-faq {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+
+  @include mq(tb2) {
+    padding-left: pxvwPC($side-margin-wide);
+    padding-right: pxvwPC($side-margin-wide);
+  }
+}
+
+.l-single-faq {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+  padding-bottom: pxvwSP(110px);
+
+  @include mq(tb2) {
+    padding-bottom: pxvwPC(110px);
+  }
+}
+
+.l-inquiry {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+  padding-bottom: pxvwSP(110px);
+
+  @include mq(tb2) {
+    padding-bottom: pxvwPC(110px);
+  }
+}
+
+#l-cart {
+  padding-left: pxvwSP($side-margin-wide);
+  padding-right: pxvwSP($side-margin-wide);
+  padding-bottom: pxvwSP(110px);
+
+  @include mq(tb2) {
+    padding-bottom: pxvwPC(110px);
+  }
+}
+
+
+
+#l-footer-fixed {
+  min-height: 100vh;
+  /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+  position: relative;
+  /* ←相対位置 */
+  padding-bottom: 44px;
+  /* ←フッターの高さを指定 */
+  box-sizing: border-box;
+  /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+  padding-bottom: 44px;
+
+  /* ←フッターの高さを指定 */
+  @include mq() {
+    padding-bottom: 40px;
+    /* ←フッターの高さを指定 */
+  }
+}
